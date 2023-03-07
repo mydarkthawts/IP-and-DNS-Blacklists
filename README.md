@@ -11,3 +11,4 @@ My first list is ProtonVPN Entry and Exit IP lists.
 My second list is ProtonVPN Domains used to query those. 
 
 These lists will be parsed and accurate to the date they are modified here on Github.
+There will be duplicates here and there. I will automate the parsing out of these duplications soon.
