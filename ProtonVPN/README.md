@@ -1,3 +1,5 @@
+-=| No longer updating this list as ProtonVPN has closed off this method requiring an auth token |=-
+
 The steps I used to obtain these were obtaining the json file from [api.protonmail.ch/VPN/logicals ](https://api.protonmail.ch/vpn/logicals)
 
 Then parsed the json file like so:
