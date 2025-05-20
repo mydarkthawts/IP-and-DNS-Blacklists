@@ -2,26 +2,13 @@
 
 The steps I used to obtain these were obtaining the json file from /home/USERNAME/.cache/Proton/VPN/serverlist.json
 
-Then parsed the json file like so:
+Then parsed the json file with grep and sorted to remove duplicates like so:
 ```
-grep -oP '(?<="EntryIP":")[^"]*' serverlist.json > protonVPNEntryIP.txt
-```
-```
-grep -oP '(?<="ExitIP":")[^"]*' serverlist.json > protonVPNExitIP.txt
+grep -oP '"Domain"\s*:\s*"\K[^"]+' serverlist.json | sort -u > domains.txt
 ```
 ```
-grep -oP '(?<="Domain":")[^"]*' serverlist.json > protonVPNDomains.txt
-```
-
-I know I could've bundled these commands together and knock it all out in one go but I prefer to inspect my work after each stage for accuracy.
-
-I sorted the files using this command to create yet another file that has all the duplicate results removed. 
-```
-sort -u protonVPNEntryIP.txt > protonVPNEntryIPSortedNoDupes.txt
+grep -oP '"EntryIP"\s*:\s*"\K[^"]+' serverlist.json | sort -u > entry_ips.txt
 ```
 ```
-sort -u protonVPNExitIP.txt > protonVPNExitIPSortedNoDupes.txt
-```
-```
-sort -u protonVPNDomains.txt > protonVPNDomainsSortedNoDupes.txt
+grep -oP '"ExitIP"\s*:\s*"\K[^"]+' serverlist.json | sort -u > exit_ips.txt
 ```
