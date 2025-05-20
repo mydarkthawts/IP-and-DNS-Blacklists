@@ -4,13 +4,13 @@ The steps I used to obtain these were obtaining the json file from /home/USERNAM
 
 Then parsed the json file like so:
 ```
-grep -oP '(?<="EntryIP":")[^"]*' logicals.json > protonVPNEntryIP.txt
+grep -oP '(?<="EntryIP":")[^"]*' serverlist.json > protonVPNEntryIP.txt
 ```
 ```
-grep -oP '(?<="ExitIP":")[^"]*' logicals.json > protonVPNExitIP.txt
+grep -oP '(?<="ExitIP":")[^"]*' serverlist.json > protonVPNExitIP.txt
 ```
 ```
-grep -oP '(?<="Domain":")[^"]*' logicals.json > protonVPNDomains.txt
+grep -oP '(?<="Domain":")[^"]*' serverlist.json > protonVPNDomains.txt
 ```
 
 I know I could've bundled these commands together and knock it all out in one go but I prefer to inspect my work after each stage for accuracy.
