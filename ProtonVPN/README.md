@@ -1,6 +1,6 @@
--=| No longer updating this list as ProtonVPN has closed off this method requiring an auth token |=-
+-=| ProtonVPN has closed off this method, instead we will use their cached json file of the server list that the app downloads to the linux home folder in .cache |=-
 
-The steps I used to obtain these were obtaining the json file from [api.protonmail.ch/VPN/logicals ](https://api.protonmail.ch/vpn/logicals)
+The steps I used to obtain these were obtaining the json file from /home/USERNAME/.cache/Proton/VPN/serverlist.json
 
 Then parsed the json file like so:
 ```
