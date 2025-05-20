@@ -1,4 +1,4 @@
--=| ProtonVPN has closed off this method, instead we will use their cached json file of the server list that the app downloads to the linux home folder in .cache |=-
+-=| ProtonVPN has closed off the original method of loading their server list and downloading the json file, instead we will use their cached json file of the server list that the app downloads to the linux home folder in .cache |=-
 
 The steps I used to obtain these were obtaining the json file from /home/USERNAME/.cache/Proton/VPN/serverlist.json
 
